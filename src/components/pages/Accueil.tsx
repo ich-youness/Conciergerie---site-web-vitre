@@ -55,22 +55,22 @@ const Accueil: React.FC = () => {
             <img 
               src="/logo principal.png" 
               alt="La Clé du Temps" 
-              className="h-24 w-auto mx-auto mb-8"
+              className="h-32 w-auto mx-auto mb-6"
             />
             <h1 className="font-playfair text-5xl md:text-7xl font-bold bg-gradient-to-r from-bronze-800 via-gold-700 to-champagne-700 bg-clip-text text-transparent mb-4">
               LA CLÉ DU TEMPS
             </h1>
-            <p className="text-xl md:text-2xl text-bronze-600 font-medium tracking-wider mb-8">
+            <p className="text-xl md:text-2xl text-bronze-600 font-medium tracking-wider mb-6">
               VOTRE LIBERTÉ, NOTRE SAVOIR FAIRE
             </p>
-            <p className="text-lg md:text-xl text-charcoal-700 max-w-3xl mx-auto mb-12 leading-relaxed">
+            <p className="text-lg md:text-xl text-charcoal-700 max-w-3xl mx-auto mb-10 leading-relaxed">
               Bienvenue chez La Clé du Temps, votre conciergerie spécialisée en gestion locative courte durée en Île-de-France. 
               Découvrez une gestion sans contraintes pour maximiser la valeur de votre bien.
             </p>
-            <button className="btn-primary inline-flex items-center space-x-2">
+            <a href="mailto:lacledutemps92@gmail.com" className="btn-primary inline-flex items-center space-x-2">
               <span>Contactez-nous pour une gestion sereine</span>
               <ArrowRight size={20} />
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -136,9 +136,9 @@ const Accueil: React.FC = () => {
               </div>
 
               <div className="mt-8">
-                <button className="btn-secondary">
+                <a href="#services" className="btn-secondary inline-block">
                   Découvrir nos services
-                </button>
+                </a>
               </div>
             </div>
 
@@ -167,12 +167,12 @@ const Accueil: React.FC = () => {
               Rejoignez nos propriétaires satisfaits et découvrez une gestion locative sans contraintes
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-bronze-700 hover:bg-cream-100 px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <a href="mailto:lacledutemps92@gmail.com" className="bg-white text-bronze-700 hover:bg-cream-100 px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg text-center">
                 Demander un devis gratuit
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-bronze-700 px-8 py-3 rounded-lg font-medium transition-all duration-300">
+              </a>
+              <a href="mailto:lacledutemps92@gmail.com" className="border-2 border-white text-white hover:bg-white hover:text-bronze-700 px-8 py-3 rounded-lg font-medium transition-all duration-300 text-center">
                 Planifier un rendez-vous
-              </button>
+              </a>
             </div>
           </div>
         </div>

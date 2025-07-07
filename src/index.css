@@ -55,6 +55,6 @@ html {
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-bronze-700 via-gold-600 to-champagne-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-bronze-700 via-gold-600 to-champagne-600 bg-clip-text text-transparent leading-tight;
   }
 }
