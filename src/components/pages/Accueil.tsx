@@ -30,7 +30,7 @@ const Accueil: React.FC = () => {
     },
     {
       icon: Shield,
-      title: "Bien entretenu avec exigence",
+      title: "Un service d’entretien rigoureux et professionnel",
       description: "Maintenance préventive et soins méticuleux de votre patrimoine"
     },
     {
@@ -49,7 +49,7 @@ const Accueil: React.FC = () => {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center hero-gradient">
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg')] bg-cover bg-center opacity-5"></div>
+        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg')] bg-cover bg-center opacity-20"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="fade-in">
             <img 
@@ -78,20 +78,20 @@ const Accueil: React.FC = () => {
       {/* Nos Engagements */}
       <section className="py-20 bg-gradient-to-br from-cream-50 to-champagne-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 fade-in">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gradient mb-6">
+          <div className="text-center mb-16 fade-in " >
+            <h2 className="font-playfair text-4xl font-semibold text-bronze-800 mb-4">
               Nos Engagements
             </h2>
-            <p className="text-xl text-charcoal-600 max-w-3xl mx-auto">
+            <p className="text-xl text-charcoal-600 leading-loose pb-2">
               Quatre piliers fondamentaux qui garantissent votre satisfaction et la valorisation de votre patrimoine
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {engagements.map((engagement, index) => (
-              <div key={index} className="fade-in text-center group">
-                <div className="card-gradient rounded-2xl p-8 h-full transition-all duration-300 group-hover:shadow-xl group-hover:scale-105 border border-champagne-200">
-                  <div className="bg-gradient-to-br from-gold-500 to-bronze-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:from-gold-600 group-hover:to-bronze-700 transition-all duration-300 shadow-lg">
+              <div key={index} className="text-center group">
+                <div className=" rounded-2xl p-8 h-full  group-hover:shadow-xl  border border-champagne-200">
+                  <div className="bg-gradient-to-br from-gold-500 to-bronze-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:from-gold-600 group-hover:to-bronze-700  shadow-lg">
                     <engagement.icon size={32} className="text-white" />
                   </div>
                   <h3 className="font-playfair text-xl font-semibold text-bronze-800 mb-4">
@@ -113,7 +113,7 @@ const Accueil: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="fade-in">
               <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gradient mb-6">
-                Pourquoi nous choisir ?
+                Pourquoi travailler avec LA CLÉ DU TEMPS ?
               </h2>
               <p className="text-xl text-charcoal-600 mb-8">
                 Une expertise reconnue en Île-de-France pour une gestion locative sans compromis

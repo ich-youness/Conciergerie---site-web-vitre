@@ -38,7 +38,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: "Comment optimisez-vous ma rentabilité locative ?",
-      answer: "Grâce à notre tarification intelligente mise à jour hebdomadairement, une présence multi-plateformes (Airbnb, Booking.com, etc.), et des prestations hôtelières qui augmentent l'attractivité de votre bien. Nous analysons en permanence le marché local, les événements, la saisonnalité et la concurrence pour ajuster les prix de manière optimale. Notre expertise nous permet d'atteindre des taux d'occupation supérieurs à 95%."
+      answer: "Grâce à notre tarification intelligente mise à jour hebdomadairement, une présence multi-plateformes (Airbnb, Booking.com, etc.), et des prestations hôtelières qui augmentent l'attractivité de votre bien. Nous analysons en permanence le marché local, les événements, la saisonnalité et la concurrence pour ajuster les prix de manière optimale. Notre expertise nous permet d'atteindre des taux d’occupation élevé et rentable. "
     },
     {
       question: "Proposez-vous des services ponctuels sans engagement ?",
@@ -72,7 +72,7 @@ const FAQ: React.FC = () => {
       <section className="py-20 hero-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 fade-in">
-            <h1 className="font-playfair text-5xl md:text-6xl font-bold text-gradient mb-6">
+            <h1 className="font-playfair text-5xl md:text-6xl font-bold text-gradient mb-6 h-20">
               Questions Fréquentes
             </h1>
             <p className="text-xl text-bronze-600 font-medium tracking-wider">
@@ -160,8 +160,7 @@ const FAQ: React.FC = () => {
                 <p className="text-charcoal-600 mb-4">
                   Écrivez-nous pour toute question
                 </p>
-                <a href="mailto:lacledutemps92@gmail.com" className="text-gold-600 font-medium hover:text-bronze-700 transition-colors">
-                  lacledutemps92@gmail.com
+                <a href="mailto:lacledutemps92@gmail.com" className="text-gold-600 font-medium hover:text-bronze-700 transition-colors">lacledutemps92@gmail.com
                 </a>
               </div>
             </div>

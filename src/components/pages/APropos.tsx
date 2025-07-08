@@ -53,10 +53,10 @@ const APropos: React.FC = () => {
       <section className="py-20 hero-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 fade-in">
-            <h1 className="font-playfair text-5xl md:text-6xl font-bold text-gradient mb-6">
+            <h1 className="font-playfair text-5xl md:text-5xl font-bold text-gradient mb-8 h-20">
               À Propos
             </h1>
-            <p className="text-xl text-bronze-600 font-medium tracking-wider">
+            <p className=" text-xl text-bronze-600 font-medium tracking-wider">
               L'excellence au service de votre patrimoine
             </p>
           </div>
@@ -112,7 +112,7 @@ const APropos: React.FC = () => {
             <div className="bg-gradient-to-br from-gold-500 to-bronze-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-8 shadow-lg">
               <Target size={40} className="text-white" />
             </div>
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gradient mb-8">
+            <h2 className="font-playfair text-4xl font-semibold text-bronze-800 mb-4">
               Notre Objectif
             </h2>
             <p className="text-2xl md:text-3xl text-charcoal-700 font-light leading-relaxed mb-8">
@@ -133,7 +133,7 @@ const APropos: React.FC = () => {
       <section className="py-20 bg-gradient-to-br from-cream-50 to-champagne-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 fade-in">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gradient mb-6">
+            <h2 className="font-playfair text-4xl font-semibold text-bronze-800 mb-4">
               Notre Expertise
             </h2>
             <p className="text-xl text-charcoal-600 max-w-3xl mx-auto">

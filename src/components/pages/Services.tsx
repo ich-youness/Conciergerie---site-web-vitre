@@ -27,16 +27,19 @@ const Services: React.FC = () => {
     "Tarification intelligente mise à jour chaque semaine",
     "Accueil des voyageurs (check-in/check-out)",
     "Ménage professionnel et blanchisserie",
-    "Gestion des cautions et des litiges"
+    "Gestion des cautions et des litiges",
+    "Réassort des consommables hôteliers",
+    "Assistance voyageurs 7j/7"
   ];
 
   const offreComplete = [
-    ...offreEssentielle,
-    "Visite technique trimestrielle",
-    "Reporting photos & vidéos réguliers",
-    "Audit de performance semestriel",
-    "Signature décor – Mise en scène saisonnière"
-  ];
+    
+  "Visite technique de contrôle trimestriel du logement",
+  "Reporting photos & vidéos réguliers pour un suivi propriétaire à distance",
+  "Audit de performance locative semestriel",
+  "Gestion administrative des sinistres et relation avec les assurances",
+  "Signature décor – mise en scène saisonnière et émotionnelle du logement",
+];
 
   const servicesProprietaires = [
     { icon: Camera, title: "Shooting photo professionnel", description: "Photos haute qualité pour valoriser votre bien" },
@@ -58,7 +61,7 @@ const Services: React.FC = () => {
       <section className="py-20 hero-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 fade-in">
-            <h1 className="font-playfair text-5xl md:text-6xl font-bold text-gradient mb-6">
+            <h1 className="font-playfair text-5xl md:text-6xl font-bold text-gradient mb-6 h-20">
               Nos Services
             </h1>
             <p className="text-xl text-bronze-600 font-medium tracking-wider">
@@ -102,7 +105,7 @@ const Services: React.FC = () => {
                 </div>
 
                 <div className="mt-8">
-                  <a href="mailto:lacledutemps92@gmail.com" className="w-full btn-secondary inline-block text-center">
+                  <a  href="mailto:lacledutemps92@gmail.com" className="w-full btn-secondary">
                     Choisir cette offre
                   </a>
                 </div>
@@ -136,7 +139,7 @@ const Services: React.FC = () => {
                 </div>
 
                 <div className="mt-8">
-                  <a href="mailto:lacledutemps92@gmail.com" className="w-full btn-primary inline-block text-center">
+                  <a  href="mailto:lacledutemps92@gmail.com" className="w-full btn-primary">
                     Choisir cette offre
                   </a>
                 </div>
