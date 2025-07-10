@@ -50,7 +50,7 @@ const Accueil: React.FC = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center hero-gradient">
         <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg')] bg-cover bg-center opacity-20"></div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pb-20">
           <div className="fade-in">
             <img 
               src="/logo principal.png" 
