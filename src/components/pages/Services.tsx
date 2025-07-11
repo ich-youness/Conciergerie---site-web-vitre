@@ -1,7 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { Check, Star, Camera, Sparkles, Car, Coffee, MapPin, Clock } from 'lucide-react';
 
-const Services: React.FC = () => {
+interface ServicesProps {
+  onContactClick: () => void;
+}
+
+const Services: React.FC<ServicesProps> = ({ onContactClick }) => {
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
@@ -61,7 +65,7 @@ const Services: React.FC = () => {
       <section className="py-20 hero-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 fade-in">
-            <h1 className="font-playfair text-5xl md:text-6xl font-bold text-gradient mb-6 h-20">
+            <h1 className="font-playfair text-5xl md:text-5xl font-bold text-gradient mb-8 h-20">
               Nos Services
             </h1>
             <p className="text-xl text-bronze-600 font-medium tracking-wider">
@@ -105,9 +109,12 @@ const Services: React.FC = () => {
                 </div>
 
                 <div className="mt-8">
-                  <a  href="mailto:lacledutemps92@gmail.com" className="w-full btn-secondary">
-                    Choisir cette offre
-                  </a>
+                  <button
+                    onClick={onContactClick}
+                    className="w-full btn-secondary"
+                  >
+                    Votre bien, entre de bonnes mains. Discutons-en.
+                  </button>
                 </div>
               </div>
             </div>
@@ -139,9 +146,12 @@ const Services: React.FC = () => {
                 </div>
 
                 <div className="mt-8">
-                  <a  href="mailto:lacledutemps92@gmail.com" className="w-full btn-primary">
-                    Choisir cette offre
-                  </a>
+                  <button
+                    onClick={onContactClick}
+                    className="w-full btn-primary"
+                  >
+                    Déléguez en toute confiance. Contactez-nous dès aujourd'hui !
+                  </button>
                 </div>
               </div>
             </div>
@@ -220,12 +230,18 @@ const Services: React.FC = () => {
               Contactez-nous pour discuter de vos besoins et obtenir un devis personnalisé
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:lacledutemps92@gmail.com" className="bg-white text-bronze-700 hover:bg-cream-100 px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg text-center">
-                Demander un devis
-              </a>
-              <a href="mailto:lacledutemps92@gmail.com" className="border-2 border-white text-white hover:bg-white hover:text-bronze-700 px-8 py-3 rounded-lg font-medium transition-all duration-300 text-center">
-                Planifier un appel
-              </a>
+              {/* <button
+                onClick={onContactClick}
+                className="bg-white text-bronze-700 hover:bg-cream-100 px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Profitez de votre temps, on gère le reste. Parlons-en.
+              </button> */}
+              {/* <button
+                onClick={onContactClick}
+                className="border-2 border-white text-white hover:bg-white hover:text-bronze-700 px-8 py-3 rounded-lg font-medium transition-all duration-300"
+              >
+                Demander un devis gratuit
+              </button> */}
             </div>
           </div>
         </div>

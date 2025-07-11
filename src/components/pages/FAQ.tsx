@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronDown, ChevronUp, Phone, Mail, Globe } from 'lucide-react';
 
-const FAQ: React.FC = () => {
+interface FAQProps {
+  onContactClick: () => void;
+}
+
+const FAQ: React.FC<FAQProps> = ({ onContactClick }) => {
   const [openItems, setOpenItems] = useState<number[]>([]);
   const observerRef = useRef<IntersectionObserver | null>(null);
 
@@ -30,6 +34,7 @@ const FAQ: React.FC = () => {
         : [...prev, index]
     );
   };
+  
 
   const faqItems = [
     {
@@ -50,7 +55,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: "Comment se déroule l'accueil des voyageurs ?",
-      answer: "Nous gérons intégralement l'accueil avec un service de check-in/check-out professionnel. Nos équipes accueillent personnellement chaque voyageur, vérifient l'état du logement, remettent les clés et fournissent toutes les informations nécessaires. Nous sommes également disponibles 24h/24 pour toute urgence pendant le séjour."
+      answer: "Nous proposons une solution d’arrivée autonome simple et sécurisée pour offrir un maximum de flexibilité à vos voyageurs, quel que soit leur horaire d’arrivée.\n✅ Accès au logement via boîte à clés sécurisée ou serrure connectée\n✅ Instructions claires et personnalisées envoyées avant l’arrivée (guide d’accès, photos, vidéos)\n✅ Vérification de l’état du logement avant chaque check-in\n✅ Support réactif 7j/7 – 24h/24 en cas de besoin ou d’urgence pendant le séjour. \nVos voyageurs profitent d’une expérience fluide, autonome et sans stress, tout en étant accompagnés à distance à chaque étape de leur séjour."
     },
     {
       question: "Quel est le délai pour commencer la gestion de mon bien ?",
@@ -62,9 +67,10 @@ const FAQ: React.FC = () => {
     },
     {
       question: "Que se passe-t-il en cas de dégradation ou de problème ?",
-      answer: "Nous gérons intégralement les cautions, les litiges et les éventuelles dégradations. Notre assurance professionnelle couvre les dommages, et nous avons un réseau de partenaires artisans pour les réparations rapides. Vous êtes informé de tout incident et de sa résolution, sans avoir à vous en occuper personnellement."
+      answer: "Nous prenons en charge l’intégralité de la gestion des cautions, des litiges et des éventuelles dégradations, directement via les plateformes partenaires comme Airbnb (AirCover) ou autres intermédiaires utilisés pour les réservations.\n✅ Déclaration et suivi des litiges via AirCover et les garanties des plateformes\n✅ Gestion des cautions selon les conditions définies pour chaque séjour\n✅ Coordination des réparations nécessaires via notre réseau d’artisans qualifiés\n✅ Communication transparente : vous êtes informé à chaque étape sans avoir à intervenir\nVous bénéficiez d’une protection efficace et d’un suivi rigoureux, sans avoir à gérer les démarches complexes vous-même."
     }
   ];
+
 
   return (
     <div className="pt-20">
@@ -106,9 +112,18 @@ const FAQ: React.FC = () => {
                   {openItems.includes(index) && (
                     <div className="px-8 pb-6">
                       <div className="border-t border-champagne-300 pt-6">
-                        <p className="text-charcoal-700 leading-relaxed">
+                        {/* <p className="text-charcoal-700 leading-relaxed">
                           {item.answer}
-                        </p>
+                        </p> */}
+                        <p className="text-charcoal-700 leading-relaxed">
+  {item.answer.split('\n').map((line, i) => (
+    <React.Fragment key={i}>
+      {line}
+      <br />
+    </React.Fragment>
+  ))}
+</p>
+
                       </div>
                     </div>
                   )}
@@ -143,8 +158,8 @@ const FAQ: React.FC = () => {
                 <p className="text-charcoal-600 mb-4">
                   Appelez-nous pour un conseil personnalisé
                 </p>
-                <a href="tel:06XXXXXXXX" className="text-gold-600 font-medium hover:text-bronze-700 transition-colors">
-                  06 XX XX XX XX
+                <a href="tel:0612345678" className="text-gold-600 font-medium hover:text-bronze-700 transition-colors">
+                  06 12 34 56 78
                 </a>
               </div>
             </div>
@@ -176,7 +191,7 @@ const FAQ: React.FC = () => {
                 <p className="text-charcoal-600 mb-4">
                   Visitez notre site pour plus d'informations
                 </p>
-                <a href="https://www.lacledutemps.fr" className="text-gold-600 font-medium hover:text-bronze-700 transition-colors">
+                <a href="https://lacledutemps.netlify.app/" className="text-gold-600 font-medium hover:text-bronze-700 transition-colors">
                   www.lacledutemps.fr
                 </a>
               </div>
@@ -195,14 +210,20 @@ const FAQ: React.FC = () => {
             <p className="text-xl text-cream-100 mb-8">
               Contactez-nous dès aujourd'hui pour une consultation gratuite et personnalisée
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:lacledutemps92@gmail.com" className="bg-white text-bronze-700 hover:bg-cream-100 px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg text-center">
-                Consultation gratuite
-              </a>
-              <a href="mailto:lacledutemps92@gmail.com" className="border-2 border-white text-white hover:bg-white hover:text-bronze-700 px-8 py-3 rounded-lg font-medium transition-all duration-300 text-center">
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center"> */}
+              {/* <button
+                onClick={onContactClick}
+                className="bg-white text-bronze-700 hover:bg-cream-100 px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Déléguez en toute confiance. Contactez-nous dès aujourd'hui !
+              </button>
+              <button
+                onClick={onContactClick}
+                className="border-2 border-white text-white hover:bg-white hover:text-bronze-700 px-8 py-3 rounded-lg font-medium transition-all duration-300"
+              >
                 Demander un devis
-              </a>
-            </div>
+              </button> */}
+            {/* </div> */}
           </div>
         </div>
       </section>

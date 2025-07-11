@@ -1,7 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { Users, Target, Award, TrendingUp, Shield, Eye } from 'lucide-react';
 
-const APropos: React.FC = () => {
+interface AProposProps {
+  onContactClick: () => void;
+}
+
+const APropos: React.FC<AProposProps> = ({ onContactClick }) => {
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {

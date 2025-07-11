@@ -1,7 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { TrendingUp, Shield, Star, Eye, ArrowRight, CheckCircle } from 'lucide-react';
 
-const Accueil: React.FC = () => {
+interface AccueilProps {
+  onContactClick: () => void;
+}
+
+const Accueil: React.FC<AccueilProps> = ({ onContactClick }) => {
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
@@ -55,22 +59,25 @@ const Accueil: React.FC = () => {
             <img 
               src="/logo principal.png" 
               alt="La Clé du Temps" 
-              className="h-32 w-auto mx-auto mb-6"
+              className="h-24 w-auto mx-auto mb-8"
             />
             <h1 className="font-playfair text-5xl md:text-7xl font-bold bg-gradient-to-r from-bronze-800 via-gold-700 to-champagne-700 bg-clip-text text-transparent mb-4">
               LA CLÉ DU TEMPS
             </h1>
-            <p className="text-xl md:text-2xl text-bronze-600 font-medium tracking-wider mb-6">
+            <p className="text-xl md:text-2xl text-bronze-600 font-medium tracking-wider mb-8">
               VOTRE LIBERTÉ, NOTRE SAVOIR FAIRE
             </p>
-            <p className="text-lg md:text-xl text-charcoal-700 max-w-3xl mx-auto mb-10 leading-relaxed">
+            <p className="text-lg md:text-xl text-charcoal-700 max-w-3xl mx-auto mb-12 leading-relaxed">
               Bienvenue chez La Clé du Temps, votre conciergerie spécialisée en gestion locative courte durée en Île-de-France. 
               Découvrez une gestion sans contraintes pour maximiser la valeur de votre bien.
             </p>
-            <a href="mailto:lacledutemps92@gmail.com" className="btn-primary inline-flex items-center space-x-2">
-              <span>Contactez-nous pour une gestion sereine</span>
+            <button
+              onClick={onContactClick}
+              className="btn-primary inline-flex items-center space-x-2"
+            >
+              <span>Déléguez en toute confiance. Contactez-nous dès aujourd'hui !</span>
               <ArrowRight size={20} />
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -136,9 +143,12 @@ const Accueil: React.FC = () => {
               </div>
 
               <div className="mt-8">
-                <a href="#services" className="btn-secondary inline-block">
-                  Découvrir nos services
-                </a>
+                <button
+                  onClick={onContactClick}
+                  className="btn-secondary inline-flex items-center justify-center"
+                >
+                  Votre bien, entre de bonnes mains. Discutons-en.
+                </button>
               </div>
             </div>
 
@@ -167,12 +177,18 @@ const Accueil: React.FC = () => {
               Rejoignez nos propriétaires satisfaits et découvrez une gestion locative sans contraintes
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:lacledutemps92@gmail.com" className="bg-white text-bronze-700 hover:bg-cream-100 px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg text-center">
+              {/* <button
+                onClick={onContactClick}
+                className="bg-white text-bronze-700 hover:bg-cream-100 px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Profitez de votre temps, on gère le reste. Parlons-en.
+              </button> */}
+              {/* <button
+                onClick={onContactClick}
+                className="border-2 border-white text-white hover:bg-white hover:text-bronze-700 px-8 py-3 rounded-lg font-medium transition-all duration-300"
+              >
                 Demander un devis gratuit
-              </a>
-              <a href="mailto:lacledutemps92@gmail.com" className="border-2 border-white text-white hover:bg-white hover:text-bronze-700 px-8 py-3 rounded-lg font-medium transition-all duration-300 text-center">
-                Planifier un rendez-vous
-              </a>
+              </button> */}
             </div>
           </div>
         </div>
