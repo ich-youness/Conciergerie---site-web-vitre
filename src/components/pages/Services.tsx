@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Check, Star, Camera, Sparkles, Car, Coffee, MapPin, Clock } from 'lucide-react';
+import { Check, Star, Camera, Sparkles, Car, Coffee, MapPin, Clock, Blocks, Baby } from 'lucide-react';
 
 interface ServicesProps {
   onContactClick: () => void;
@@ -46,17 +46,24 @@ const Services: React.FC<ServicesProps> = ({ onContactClick }) => {
 ];
 
   const servicesProprietaires = [
-    { icon: Camera, title: "Shooting photo professionnel", description: "Photos haute qualité pour valoriser votre bien" },
-    { icon: Sparkles, title: "Nettoyage complet en profondeur", description: "Remise à neuf complète de votre propriété" },
     { icon: Star, title: "Audit de rentabilité", description: "Analyse détaillée du potentiel de votre bien" },
-    { icon: Check, title: "Assistance de rénovation légère", description: "Conseils et coordination pour optimiser votre bien" }
+    { icon: Check, title: "Assistance de rénovation légère", description: "Conseils et coordination pour optimiser votre bien" },
+    { icon: Blocks, title: "Mise en place d’un système d’arrivée autonome", description: "Installation et configuration pour accueillir vos voyageurs" },
+    { icon: Sparkles, title: "Nettoyage complet en profondeur", description: "Remise à neuf complète de votre propriété" },
+    { icon: Camera, title: "Shooting photo professionnel", description: "Photos haute qualité pour valoriser votre bien" },
+    
+    
+    
   ];
 
   const servicesVoyageurs = [
     { icon: Car, title: "Transfert privé aéroport/gare", description: "Service de transport premium" },
+    { icon: Clock, title: "Late check-out / early check-in", description: "Flexibilité horaire" },
+    { icon: Baby, title: "Location d'équipements bébé", description: "Chaise haute, lit parapluie, etc." },
+
     { icon: Coffee, title: "Service de ménage pendant le séjour", description: "Entretien sur demande" },
     { icon: MapPin, title: "Guide de voyage \"Paris authentique\"", description: "Recommandations exclusives" },
-    { icon: Clock, title: "Late check-out / early check-in", description: "Flexibilité horaire" }
+    
   ];
 
   return (

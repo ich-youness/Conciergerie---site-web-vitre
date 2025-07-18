@@ -45,9 +45,9 @@ const APropos: React.FC<AProposProps> = ({ onContactClick }) => {
   ];
 
   const stats = [
-    { number: "150+", label: "Biens gérés" },
-    { number: "95%", label: "Taux d'occupation" },
-    { number: "5★", label: "Note moyenne" },
+    // { number: "150+", label: "Biens gérés" },
+    { number: "85%", label: "Taux d'occupation" },
+    { number: "4.8★", label: "Note moyenne" },
     { number: "24/7", label: "Support client" }
   ];
 
@@ -177,7 +177,7 @@ const APropos: React.FC<AProposProps> = ({ onContactClick }) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="fade-in text-center">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">

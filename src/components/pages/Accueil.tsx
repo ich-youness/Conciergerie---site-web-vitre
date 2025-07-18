@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { TrendingUp, Shield, Star, Eye, ArrowRight, CheckCircle } from 'lucide-react';
+import { TrendingUp, Shield, Star, Eye, ArrowRight, CheckCircle, Award, Gem } from 'lucide-react';
 
 interface AccueilProps {
   onContactClick: () => void;
@@ -28,24 +28,28 @@ const Accueil: React.FC<AccueilProps> = ({ onContactClick }) => {
 
   const engagements = [
     {
-      icon: TrendingUp,
+      icon: Award,
       title: "Revenus optimisés en continu",
-      description: "Tarification intelligente et stratégies de maximisation des revenus"
+      description: "Tarification intelligente et stratégies de maximisation des revenus",
+      gradient: "from-emerald-500 to-teal-600"
     },
     {
       icon: Shield,
       title: "Un service d’entretien rigoureux et professionnel",
-      description: "Maintenance préventive et soins méticuleux de votre patrimoine"
+      description: "Maintenance préventive et soins méticuleux de votre patrimoine",
+      gradient: "from-blue-500 to-indigo-600"
     },
     {
-      icon: Star,
+      icon: Gem,
       title: "Prestations haut de gamme",
-      description: "Service d'excellence à chaque étape de la gestion"
+      description: "Service d'excellence à chaque étape de la gestion",
+      gradient: "from-purple-500 to-violet-600"
     },
     {
       icon: Eye,
       title: "Suivi clair et transparent",
-      description: "Reporting détaillé et communication permanente"
+      description: "Reporting détaillé et communication permanente",
+      gradient: "from-amber-500 to-orange-600"
     }
   ];
 
@@ -61,12 +65,14 @@ const Accueil: React.FC<AccueilProps> = ({ onContactClick }) => {
               alt="La Clé du Temps" 
               className="h-24 w-auto mx-auto mb-8"
             />
+
             <h1 className="font-playfair text-5xl md:text-7xl font-bold bg-gradient-to-r from-bronze-800 via-gold-700 to-champagne-700 bg-clip-text text-transparent mb-4">
               LA CLÉ DU TEMPS
             </h1>
             <p className="text-xl md:text-2xl text-bronze-600 font-medium tracking-wider mb-8">
               VOTRE LIBERTÉ, NOTRE SAVOIR FAIRE
             </p>
+            
             <p className="text-lg md:text-xl text-charcoal-700 max-w-3xl mx-auto mb-12 leading-relaxed">
               Bienvenue chez La Clé du Temps, votre conciergerie spécialisée en gestion locative courte durée en Île-de-France. 
               Découvrez une gestion sans contraintes pour maximiser la valeur de votre bien.
@@ -96,15 +102,15 @@ const Accueil: React.FC<AccueilProps> = ({ onContactClick }) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {engagements.map((engagement, index) => (
-              <div key={index} className="text-center group">
-                <div className=" rounded-2xl p-8 h-full  group-hover:shadow-xl  border border-champagne-200">
-                  <div className="bg-gradient-to-br from-gold-500 to-bronze-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:from-gold-600 group-hover:to-bronze-700  shadow-lg">
+              <div key={index} className="text-center group fade-in">
+                <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 h-full group-hover:shadow-2xl transition-all duration-500 border border-white/40 group-hover:border-white/60 group-hover:bg-white/80">
+                  <div className={`bg-gradient-to-br ${engagement.gradient} rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-all duration-500 shadow-xl group-hover:shadow-2xl`}>
                     <engagement.icon size={32} className="text-white" />
                   </div>
-                  <h3 className="font-playfair text-xl font-semibold text-bronze-800 mb-4">
+                  <h3 className="font-playfair text-xl font-bold text-charcoal-800 mb-6 group-hover:text-bronze-800 transition-colors duration-300">
                     {engagement.title}
                   </h3>
-                  <p className="text-charcoal-600 leading-relaxed">
+                  <p className="text-charcoal-600 leading-relaxed text-sm group-hover:text-charcoal-700 transition-colors duration-300">
                     {engagement.description}
                   </p>
                 </div>

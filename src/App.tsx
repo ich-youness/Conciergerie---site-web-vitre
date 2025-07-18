@@ -10,6 +10,14 @@ function App() {
   const [currentPage, setCurrentPage] = useState('accueil');
   const contactFormRef = useRef<HTMLDivElement>(null);
 
+  const handlePageChange = (page: string) => {
+    setCurrentPage(page);
+    // Défiler vers le haut de la page
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
   const scrollToContactForm = () => {
     contactFormRef.current?.scrollIntoView({ 
       behavior: 'smooth',
@@ -34,7 +42,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header currentPage={currentPage} onPageChange={setCurrentPage} />
+      <Header currentPage={currentPage} onPageChange={handlePageChange} />
       <main>
         {renderPage()}
       </main>
