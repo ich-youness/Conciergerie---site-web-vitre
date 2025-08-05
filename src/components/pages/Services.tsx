@@ -64,6 +64,7 @@ const Services: React.FC<ServicesProps> = ({ onContactClick }) => {
     { icon: Coffee, title: "Service de ménage pendant le séjour", description: "Entretien sur demande" },
     { icon: MapPin, title: "Guide de voyage \"Paris authentique\"", description: "Recommandations exclusives" },
     
+    
   ];
 
   return (

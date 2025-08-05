@@ -89,7 +89,7 @@ const Footer: React.FC<FooterProps> = ({ contactFormRef }) => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone size={16} className="text-gold-400" />
-                <span className="text-sm text-cream-200">06 12 34 56 78</span>
+                <span className="text-sm text-cream-200">+33 6 62 59 15 78</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-gold-400" />
@@ -97,7 +97,7 @@ const Footer: React.FC<FooterProps> = ({ contactFormRef }) => {
               </div>
               <div className="flex items-center space-x-3">
                 <Globe size={16} className="text-gold-400" />
-                <span className="text-sm text-cream-200">www.lacledutemps.netlify.app</span>
+                <span className="text-sm text-cream-200">www.lacledutemps.com</span>
               </div>
             </div>
           </div>
