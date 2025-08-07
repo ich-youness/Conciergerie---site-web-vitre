@@ -158,8 +158,8 @@ const FAQ: React.FC<FAQProps> = ({ onContactClick }) => {
                 <p className="text-charcoal-600 mb-4">
                   Appelez-nous pour un conseil personnalisé
                 </p>
-                <a href="tel:0612345678" className="text-gold-600 font-medium hover:text-bronze-700 transition-colors">
-                  06 12 34 56 78
+                <a href="tel:+33662591578" className="text-gold-600 font-medium hover:text-bronze-700 transition-colors">
+                  +33 6 62 59 15 78
                 </a>
               </div>
             </div>
@@ -191,8 +191,8 @@ const FAQ: React.FC<FAQProps> = ({ onContactClick }) => {
                 <p className="text-charcoal-600 mb-4">
                   Visitez notre site pour plus d'informations
                 </p>
-                <a href="https://lacledutemps.netlify.app/" className="text-gold-600 font-medium hover:text-bronze-700 transition-colors">
-                  www.lacledutemps.fr
+                <a href="https://lacledutemps.com/" className="text-gold-600 font-medium hover:text-bronze-700 transition-colors">
+                  www.lacledutemps.com
                 </a>
               </div>
             </div>
